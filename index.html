@@ -3,10 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Google Form Quiz Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .grid-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .grid-item:hover {
+            background-color: #45a049;
+        }
+        .grid-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site</h1>
-    <p>This is the homepage of my GitHub Pages site.</p>
+    <div class="container">
+        <h1>Google Form Quizzes</h1>
+        <div class="grid">
+            <div class="grid-item" onclick="openForm('https://docs.google.com/forms/d/e/1FAIpQLSev1N4yG5uNrZY9s6jRUxKhJObXIEkdPjV_gKKbokdLcZLemQ/viewform')">
+                <img src="https://via.placeholder.com/50" alt="Quiz 1">
+                <p>Quiz 1</p>
+            </div>
+            <div class="grid-item" onclick="openForm('https://docs.google.com/forms/d/e/1FAIpQLSdq0Ck_3I8K4ZOqlUE2uQvR1G4J-UdWoY-ov7JhRf7BlaF8oQ/viewform')">
+                <img src="https://via.placeholder.com/50" alt="Quiz 2">
+                <p>Quiz 2</p>
+            </div>
+            <div class="grid-item" onclick="openForm('https://docs.google.com/forms/d/e/1FAIpQLSfD8e8eNdvqhb0trQ-7O7a5tCazgYyDFD5dT6E6VzdVxdI5Cg/viewform')">
+                <img src="https://via.placeholder.com/50" alt="Quiz 3">
+                <p>Quiz 3</p>
+            </div>
+            <!-- Add more grid items as needed -->
+        </div>
+    </div>
+
+    <script>
+        function openForm(url) {
+            window.open(url, "_blank");
+        }
+    </script>
 </body>
 </html>
